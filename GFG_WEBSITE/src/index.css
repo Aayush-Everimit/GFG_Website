@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+
+html, body, #root {
+  height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+
+}
+
+.app-wrapper { width: 100%; min-height: 100vh; overflow-x: hidden; }
+
+.gfg-pattern {
+  background-image:
+          linear-gradient(rgba(47, 141, 70, 0.05) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(47, 141, 70, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #2f8d46 0%, #5cb85c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(47, 141, 70, 0.2);
+}
+
+/* Section Reveal Animation */
+.section-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.section-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Float Animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+.float-animation { animation: float 3s ease-in-out infinite; }
