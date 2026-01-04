@@ -10,7 +10,7 @@ export default function NationSkillUp() {
     ];
 
     return (
-        <section ref={ref} id="skillup" className={`py-24 px-6 bg-gradient-to-br from-green-600 to-green-800 text-white section-reveal ${visible ? "visible" : ""}`}>
+        <section ref={ref} id="skillup" className={`py-24 px-6 bg-gradient-to-br from-green-600 to-green-800 text-white section-reveal station ${visible ? "visible" : ""}`}>
             <div className="max-w-7xl mx-auto text-center">
                 <h2 className="text-5xl font-bold mb-6">Nation SkillUp</h2>
                 <p className="text-xl mb-12 max-w-3xl mx-auto opacity-90">

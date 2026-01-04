@@ -4,7 +4,7 @@ import useReveal from "../utils/useReveal";
 export default function About() {
     const [ref, visible] = useReveal();
     return (
-        <section ref={ref} id="about" className={`py-24 px-6 bg-gray-800/50 section-reveal ${visible ? "visible" : ""}`}>
+        <section ref={ref} id="about" className={`py-24 px-6 bg-gray-800/50 section-reveal station ${visible ? "visible" : ""}`}>
             <div className="max-w-7xl mx-auto">
                 <h2 className="text-5xl font-bold text-center mb-16 gradient-text">{ABOUT_CONTENT.title}</h2>
                 <p className="text-lg text-gray-300 leading-relaxed mb-12 text-center">{ABOUT_CONTENT.description}</p>

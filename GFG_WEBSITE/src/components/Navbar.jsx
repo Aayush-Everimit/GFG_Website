@@ -1,4 +1,5 @@
 import { useState } from "react";
+import logo from '../assets/logo.png';
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
@@ -12,27 +13,20 @@ export default function Navbar() {
 
     return (
         <nav className="fixed top-0 left-0 right-0 bg-gray-900/90 backdrop-blur-md shadow-lg z-40">
-            <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between relative">
                 {/* Logo */}
                 <div className="flex items-center space-x-3">
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                        <rect width="40" height="40" rx="8" fill="#2F8D46" />
-                        <path
-                            d="M12 28V12H18C20.2 12 22 13.8 22 16C22 17.2 21.4 18.3 20.5 19C21.9 19.7 23 21.2 23 23C23 25.8 20.8 28 18 28H12ZM15 18H18C18.6 18 19 17.6 19 17C19 16.4 18.6 16 18 16H15V18ZM15 25H18C19.1 25 20 24.1 20 23C20 21.9 19.1 21 18 21H15V25Z"
-                            fill="white"
-                        />
-                        <circle cx="28" cy="20" r="3" fill="white" />
-                    </svg>
+                    <img src={logo} alt="Club GFG Logo" className="w-10 h-10" />
                     <span className="text-xl font-bold text-white">Club GFG</span>
                 </div>
 
                 {/* Desktop Menu */}
-                <div className="hidden md:flex space-x-8">
+                <div className="hidden md:flex space-x-12">
                     {links.map(link => (
                         <a
                             key={link.label}
                             href={link.href}
-                            className="nav-link text-gray-300 hover:text-green-400"
+                            className="nav-link text-lg text-gray-300 hover:text-green-400"
                         >
                             {link.label}
                         </a>
@@ -62,6 +56,8 @@ export default function Navbar() {
                     ))}
                 </div>
             )}
+            {/* Navbar strip */}
+            <div className="absolute right-0 top-0 h-full w-16" style={{ backgroundColor: '#255853' }}></div>
         </nav>
     );
 }

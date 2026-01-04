@@ -4,7 +4,7 @@ import useReveal from "../utils/useReveal";
 export default function Blog() {
     const [ref, visible] = useReveal();
     return (
-        <section ref={ref} id="blog" className={`py-24 px-6 bg-gray-800/50 section-reveal ${visible ? "visible" : ""}`}>
+        <section ref={ref} id="blog" className={`py-24 px-6 bg-gray-800/50 section-reveal station ${visible ? "visible" : ""}`}>
             <div className="max-w-7xl mx-auto">
                 <h2 className="text-5xl font-bold text-center mb-16 gradient-text">Latest from Our Blog</h2>
                 <div className="grid md:grid-cols-3 gap-8">
