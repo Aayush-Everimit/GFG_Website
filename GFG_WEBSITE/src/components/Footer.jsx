@@ -1,3 +1,5 @@
+import logo from '../assets/logo.png';
+
 export default function Footer() {
     return (
         <footer className="bg-gray-900 text-white py-12 px-6">
@@ -5,7 +7,7 @@ export default function Footer() {
                 {/* Logo + Name */}
                 <div className="flex items-center justify-center space-x-3 mb-6">
                     <Logo />
-                    <span className="text-2xl font-bold">Club GeeksForGeeks</span>
+                    <span className="text-2xl font-bold">GeeksForGeeks</span>
                 </div>
 
                 {/* Navigation Links */}
@@ -63,14 +65,7 @@ function FooterLink({ href, label }) {
 
 function Logo() {
     return (
-        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-            <rect width="40" height="40" rx="8" fill="#2F8D46" />
-            <path
-                d="M12 28V12H18C20.2 12 22 13.8 22 16C22 17.2 21.4 18.3 20.5 19C21.9 19.7 23 21.2 23 23C23 25.8 20.8 28 18 28H12ZM15 18H18C18.6 18 19 17.6 19 17C19 16.4 18.6 16 18 16H15V18ZM15 25H18C19.1 25 20 24.1 20 23C20 21.9 19.1 21 18 21H15V25Z"
-                fill="white"
-            />
-            <circle cx="28" cy="20" r="3" fill="white" />
-        </svg>
+        <img src={logo} alt="Club GFG Logo" className="w-10 h-10" />
     );
 }
 

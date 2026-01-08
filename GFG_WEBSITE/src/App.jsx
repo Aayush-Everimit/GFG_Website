@@ -6,11 +6,12 @@ import Blog from "./components/Blog";
 import NationSkillUp from "./components/NationSkillUp";
 import Footer from "./components/Footer";
 import Team from "./components/Team.jsx";
+import 'boxicons/css/boxicons.min.css';
 
 
 export default function App() {
     return (
-        <div className="app-wrapper bg-gray-900 gfg-pattern relative">
+        <div className="app-wrapper relative">
             <Navbar />
 
             {/* Main Content Sections */}
@@ -25,12 +26,8 @@ export default function App() {
 
             <Footer />
 
-            {/* Vertical green strip accent */}
-            <div 
-                id="right-accent-strip"
-                className="fixed right-0 top-0 bottom-0 w-16 z-30 transition-colors duration-300" 
-                style={{ backgroundColor: '#1a3d3a' }}
-            ></div>
+
         </div>
+
     );
 }

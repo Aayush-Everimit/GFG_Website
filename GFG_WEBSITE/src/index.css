@@ -122,7 +122,21 @@ body {
   width: 100%; 
   min-height: 100vh; 
   position: relative;
-  overflow-x: hidden; 
+  overflow-x: hidden;
+  background: linear-gradient(180deg, #000000 0%, #0f2a1a 100%);
+}
+
+.app-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at 100% 50%, rgba(0,255,136,0.5), transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(50px);
 }
 
 /* REFINED GRID PATTERN */
@@ -166,3 +180,69 @@ body {
   z-index: 45;
 }
 
+/* Slow pulse for the smog image to make it look alive */
+@keyframes pulseSlow {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.05); }
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 8s ease-in-out infinite;
+}
+
+/* Mouse cursor follower effect (Add this if you want a glowing trail) */
+.gfg-pattern::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(0, 255, 136, 0.08), transparent 40%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Neon Underline for Title */
+.neon-underline {
+  position: relative;
+  display: inline-block;
+}
+.neon-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #00ff88, #00ff88);
+  box-shadow: 0 0 10px #00ff88, 0 0 20px #00ff88, 0 0 30px #00ff88;
+  border-radius: 2px;
+}
+
+/* Custom Selection Color */
+::selection {
+  background: rgba(0, 255, 136, 0.3);
+  color: #fff;
+}
+
+/* Bounce Nav Animation */
+@keyframes bounceNav {
+  0% { transform: translate(4px, 4px) scale(1); }
+  10% { transform: translate(30%, 20%) scale(0.9); }
+  20% { transform: translate(60%, 4px) scale(1); }
+  30% { transform: translate(80%, 25%) scale(0.9); }
+  40% { transform: translate(70%, 50%) scale(1); }
+  50% { transform: translate(80%, 75%) scale(0.9); }
+  60% { transform: translate(50%, 80%) scale(1); }
+  70% { transform: translate(20%, 70%) scale(0.9); }
+  80% { transform: translate(4px, 50%) scale(1); }
+  90% { transform: translate(25%, 25%) scale(0.9); }
+  100% { transform: translate(4px, 4px) scale(1); }
+}
+.animate-bounce-nav {
+  animation: bounceNav 10s infinite ease-in-out;
+}
+
+.font-outline {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+  color: transparent;
+}

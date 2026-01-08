@@ -12,7 +12,7 @@ export default function Navbar() {
     ];
 
     return (
-        <nav className="fixed top-0 left-0 right-0 bg-gray-900/90 backdrop-blur-md shadow-lg z-40">
+        <nav className="fixed top-0 left-0 right-0 bg-black/90 backdrop-blur-md shadow-lg border-b border-green-400 shadow-green-400 z-40 relative">
             <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between relative">
                 {/* Logo */}
                 <div className="flex items-center space-x-3">
@@ -56,8 +56,6 @@ export default function Navbar() {
                     ))}
                 </div>
             )}
-            {/* Navbar strip */}
-            <div className="absolute right-0 top-0 h-full w-16" style={{ backgroundColor: '#255853' }}></div>
         </nav>
     );
 }

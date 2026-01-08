@@ -1,5 +1,5 @@
 export const HERO_CONTENT = {
-    title: "Welcome to GFG Student Chapter",
+    title: "Welcome to GFG Student<br />Chapter",
     subtitle:
         "Empowering students through code, collaboration, and continuous learning",
     buttons: [
